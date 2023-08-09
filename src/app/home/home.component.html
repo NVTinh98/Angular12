@@ -1,4 +1,10 @@
 <div class="LogoHanes">
     <h3>Đây là component HOME</h3>
     <h2>Chào bạn {{ name }}</h2>
+    <input value="{{ name }}" />
+    <br/>
+
+    <input [value]="name" title="Đây là Name" /> <br/>
+    <input [value]="name" title="Đây là {{name}}" /> <br/>
+    <input [value]="name" [title]="'Đây là' + name" />
 </div>
