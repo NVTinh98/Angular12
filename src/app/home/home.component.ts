@@ -7,5 +7,5 @@ import { Component } from '@angular/core';
 })
 export class HOMEComponent {
   public name = 'Tỉnh';
-
+  public age = 15;
 }
