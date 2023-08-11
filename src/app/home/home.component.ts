@@ -8,9 +8,9 @@ import { Component } from '@angular/core';
 export class HOMEComponent {
   public name = 'Tỉnh';
   public age = 15;
+  public traiCay = ['Táo','Nho','Cam','Quyt'];
 
-  public resetName(): void{
-    console.log('resetName');
-    this.name ='';
+  public ngOnInit(): void{
+    console.log('trai cay = ', this.traiCay)
   }
 }
