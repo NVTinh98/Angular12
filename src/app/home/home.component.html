@@ -1,12 +1,39 @@
 <div class="LogoHanes">
-    <h3>Đây là component HOME</h3>
-    <h2>Chào bạn {{ name }}</h2>
+    <h3 style="text-align: center; font-size: 1cm;">HOME</h3>
+    <h2>Chào bạn * {{ name }} *Bạn Giàu Của Tôi Ơi. Bắn xin 200k NÀO</h2>
+    <h3> VIETCOMBANK - HOÀNG ĐÌNH TÀI - 66666888886789</h3>
     <br/>
-    <input type="text" [(ngModel)]="age" />
-    <h3>Trái Cây</h3>
-    <div *ngFor="let trai of traiCay; let i = index" >
-        <li> {{ i+1 }}. {{ trai }} </li>
+    <br/>
 
-        </div>
+    <table class="table">
+        <tr>
+          <th>Thứ tự</th>
+          <th>Tên</th>
+          <th>Giá</th>
+          <th>Đại Hạ Giá</th>
+        </tr>
+        <tr *ngFor="let trai of traiCay ; let i = index">
+            <th>{{i+1}}</th>
+            <th>{{trai}}</th>
+            <th>0</th>
+        </tr>
+        
+        
+      </table> <br />
 
+      <table class="table">
+        <tr>
+            <th style="background-color: pink;">Thứ tự</th>
+            <th style="background-color: pink;">Tên</th>
+            <th style="background-color: pink;">Giá</th>
+            <th>Đại Hạ Giá</th>
+          </tr>
+        <tr *ngFor="let trai of traiCay2 ; let i = index">
+            <td>{{i+1}}</td>
+            <td>{{trai.ten}}</td>
+            <td><span [ngClass]="{'so-am' : trai.gia<0 }">{{trai.gia}}</span></td>
+            <td><span *ngIf="trai.haGia" >Đang Hạ Giá</span></td>
+        </tr>
+        
+      </table>
 </div>
