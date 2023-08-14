@@ -1,4 +1,4 @@
-<div class="LogoHanes">
+<!-- <div class="LogoHanes">
     <h3 style="text-align: center; font-size: 1cm;">HOME</h3>
     <h2>Chào bạn * {{ name }} *Bạn Giàu Của Tôi Ơi. Bắn xin 200k NÀO</h2>
     <h3> VIETCOMBANK - HOÀNG ĐÌNH TÀI - 66666888886789</h3>
@@ -30,10 +30,24 @@
           </tr>
         <tr *ngFor="let trai of traiCay2 ; let i = index">
             <td>{{i+1}}</td>
-            <td>{{trai.ten}}</td>
-            <td><span [ngClass]="{'so-am' : trai.gia<0 }">{{trai.gia}}</span></td>
+            <td>{{trai.ten | uppercase }}</td>
+            <td><span [ngClass]="{'so-am' : trai.gia<0 }">{{trai.gia | currency: "VND"}}</span></td>
             <td><span *ngIf="trai.haGia" >Đang Hạ Giá</span></td>
         </tr>
         
       </table>
+</div> -->
+<br />
+
+<div>
+  Tỉnh / Thành Phố:
+  <select id="city" (change)="changeCity($event)">
+    <option *ngFor="let ttp of vietnamData" value="{{ttp.city}}"> {{ttp.city}}</option>
+  </select>
+  <br/>
+
+  Quận / Huyện
+  <select id="district">
+    <option *ngFor="let district of districts" value="{{district}}"> {{district}}</option>
+  </select>
 </div>
