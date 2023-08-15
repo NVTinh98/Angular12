@@ -8,6 +8,7 @@ import { HOMEComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { HightLightDirective } from './Directives/hight-light.directive';
+import { TemplateDrivenFormComponent } from './template-driven-form/template-driven-form.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { HightLightDirective } from './Directives/hight-light.directive';
     HOMEComponent,
     AboutComponent,
     PageNotFoundComponent,
-    HightLightDirective
+    HightLightDirective,
+    TemplateDrivenFormComponent
   ],
   imports: [
     BrowserModule,
